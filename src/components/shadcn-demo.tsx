@@ -37,187 +37,230 @@ import {
 
 export function ShadcnDemo() {
   return (
-    <ToastProvider>
-      <TooltipProvider>
-        <div className="min-h-screen bg-background flex flex-col">
-          <header className="border-b border-foreground">
-            <div className="container mx-auto py-4 flex justify-between items-center">
-              <h1 className="text-2xl font-bold">Shadcn Demo</h1>
-              <nav>
-                <Button variant="ghost" className="mr-2">
-                  Home
-                </Button>
-                <Button variant="ghost" className="mr-2">
-                  About
-                </Button>
-                <Button variant="secondary">Contact</Button>
-              </nav>
-            </div>
-          </header>
+    <>
+      <ToastProvider>
+        <TooltipProvider>
+          <div className="min-h-screen bg-background flex flex-col">
+            <header className="border-b border-foreground">
+              <div className="container mx-auto py-4 flex justify-between items-center">
+                <h1 className="text-2xl font-bold">Shadcn Demo</h1>
+                <nav>
+                  <Button variant="ghost" className="mr-2">
+                    Home
+                  </Button>
+                  <Button variant="ghost" className="mr-2">
+                    About
+                  </Button>
+                  <Button variant="secondary">Contact</Button>
+                </nav>
+              </div>
+            </header>
 
-          <main className="flex-grow container mx-auto py-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Form Elements</CardTitle>
-                  <CardDescription>
-                    Various form components from shadcn
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="password">Password</Label>
-                    <Input id="password" type="password" />
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="terms" />
-                    <Label htmlFor="terms">Accept terms and conditions</Label>
-                  </div>
-                  <div>
-                    <Label>Favorite Color</Label>
-                    <RadioGroup defaultValue="red">
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="red" id="red" />
-                        <Label htmlFor="red">Red</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="blue" id="blue" />
-                        <Label htmlFor="blue">Blue</Label>
-                      </div>
-                    </RadioGroup>
-                  </div>
-                  <div>
-                    <Label htmlFor="country">Country</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a country" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="us">United States</SelectItem>
-                        <SelectItem value="uk">United Kingdom</SelectItem>
-                        <SelectItem value="ca">Canada</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full">Submit</Button>
-                </CardFooter>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Interactive Components</CardTitle>
-                  <CardDescription>Buttons, toggles, and more</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex flex-col gap-2">
-                    <div className="flex gap-2">
-                      <Button>Primary</Button>
-                      <Button variant="secondary">Secondary</Button>
-                      <Button variant="outline">Outline</Button>
-                      <Button variant="ghost">Ghost</Button>
+            <main className="flex-grow container mx-auto py-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Form Elements</CardTitle>
+                    <CardDescription>
+                      Various form components from shadcn
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="Enter your email"
+                      />
                     </div>
-
-                    <div className="flex gap-2">
-                      <Button size="sm">Primary</Button>
-                      <Button size="sm" variant="secondary">
-                        Secondary
-                      </Button>
-                      <Button size="sm" variant="outline">
-                        Outline
-                      </Button>
-                      <Button size="sm" variant="ghost">
-                        Ghost
-                      </Button>
+                    <div>
+                      <Label htmlFor="password">Password</Label>
+                      <Input id="password" type="password" />
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-2 rounded-sm">
-                    <Switch id="airplane-mode" />
-                    <Label htmlFor="airplane-mode">Airplane Mode</Label>
-                  </div>
-                  <div>
-                    <Label>Volume</Label>
-                    <Slider
-                      defaultValue={[50]}
-                      max={100}
-                      step={1}
-                      className="bg-secondary"
-                    />
-                  </div>
-                  <div className="flex space-x-2">
-                    <Toggle>Toggle</Toggle>
-                    <Toggle variant="outline">Outline</Toggle>
-                  </div>
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Type your message here."
-                    />
-                  </div>
-                  <div className="flex space-x-2">
-                    <Badge>Default</Badge>
-                    <Badge variant="secondary">Secondary</Badge>
-                    <Badge variant="outline">Outline</Badge>
-                    <Badge variant="destructive">Destructive</Badge>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="flex items-center space-x-2">
+                      <Checkbox id="terms" />
+                      <Label htmlFor="terms">Accept terms and conditions</Label>
+                    </div>
+                    <div>
+                      <Label>Favorite Color</Label>
+                      <RadioGroup defaultValue="red">
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="red" id="red" />
+                          <Label htmlFor="red">Red</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="blue" id="blue" />
+                          <Label htmlFor="blue">Blue</Label>
+                        </div>
+                      </RadioGroup>
+                    </div>
+                    <div>
+                      <Label htmlFor="country">Country</Label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select a country" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="us">United States</SelectItem>
+                          <SelectItem value="uk">United Kingdom</SelectItem>
+                          <SelectItem value="ca">Canada</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button className="w-full">Submit</Button>
+                  </CardFooter>
+                </Card>
 
-              <Card className="md:col-span-2">
-                <CardHeader>
-                  <CardTitle>Tabs Example</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Tabs defaultValue="account">
-                    <TabsList className="grid w-full grid-cols-2">
-                      <TabsTrigger value="account">Account</TabsTrigger>
-                      <TabsTrigger value="password">Password</TabsTrigger>
-                    </TabsList>
-                    <TabsContent value="account">
-                      <p>Manage your account settings here.</p>
-                    </TabsContent>
-                    <TabsContent value="password">
-                      <p>Change your password here.</p>
-                    </TabsContent>
-                  </Tabs>
-                </CardContent>
-              </Card>
-            </div>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Interactive Components</CardTitle>
+                    <CardDescription>
+                      Buttons, toggles, and more
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex flex-col gap-2">
+                      <div className="flex gap-2">
+                        <Button>Primary</Button>
+                        <Button variant="secondary">Secondary</Button>
+                        <Button variant="outline">Outline</Button>
+                        <Button variant="ghost">Ghost</Button>
+                      </div>
 
-            <div className="mt-8 text-center">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button variant="outline">Hover me</Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>This is a tooltip!</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-          </main>
+                      <div className="flex gap-2">
+                        <Button size="sm">Primary</Button>
+                        <Button size="sm" variant="secondary">
+                          Secondary
+                        </Button>
+                        <Button size="sm" variant="outline">
+                          Outline
+                        </Button>
+                        <Button size="sm" variant="ghost">
+                          Ghost
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2 rounded-sm">
+                      <Switch id="airplane-mode" />
+                      <Label htmlFor="airplane-mode">Airplane Mode</Label>
+                    </div>
+                    <div>
+                      <Label>Volume</Label>
+                      <Slider
+                        defaultValue={[50]}
+                        max={100}
+                        step={1}
+                        className="bg-secondary"
+                      />
+                    </div>
+                    <div className="flex space-x-2">
+                      <Toggle>Toggle</Toggle>
+                      <Toggle variant="outline">Outline</Toggle>
+                    </div>
+                    <div>
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Type your message here."
+                      />
+                    </div>
+                    <div className="flex space-x-2">
+                      <Badge>Default</Badge>
+                      <Badge variant="secondary">Secondary</Badge>
+                      <Badge variant="outline">Outline</Badge>
+                      <Badge variant="destructive">Destructive</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
 
-          <footer className="border-t">
-            <div className="container mx-auto py-4 text-center text-sm text-muted-foreground">
-              © 2023 Shadcn Demo. All rights reserved.
-            </div>
-          </footer>
-        </div>
+                <Card className="md:col-span-2">
+                  <CardHeader>
+                    <CardTitle>Tabs Example</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Tabs defaultValue="account">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="account">Account</TabsTrigger>
+                        <TabsTrigger value="password">Password</TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="account">
+                        <p>Manage your account settings here.</p>
+                      </TabsContent>
+                      <TabsContent value="password">
+                        <p>Change your password here.</p>
+                      </TabsContent>
+                    </Tabs>
+                  </CardContent>
+                </Card>
+              </div>
 
-        <Toast />
-      </TooltipProvider>
-    </ToastProvider>
+              <div className="mt-8 text-center">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="outline">Hover me</Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>This is a tooltip!</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+            </main>
+
+            <footer className="border-t">
+              <div className="container mx-auto py-4 text-center text-sm text-muted-foreground">
+                © 2023 Shadcn Demo. All rights reserved.
+              </div>
+            </footer>
+          </div>
+
+          <Toast />
+        </TooltipProvider>
+      </ToastProvider>
+
+      <article className="prose prose-neutral p-5">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Paragraph</p>
+        <p>
+          Paragraph with <a href="#">link</a>
+        </p>
+        <p>
+          Paragraph with <strong>strong</strong> text
+        </p>
+        <p>
+          Paragraph with <em>emphasis</em> text
+        </p>
+        <p>
+          Paragraph with <code>code</code> text
+        </p>
+        <p>
+          Paragraph with <mark>mark</mark> text
+        </p>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+        <ol>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ol>
+        <blockquote>Blockquote</blockquote>
+        <pre>
+          <code>code block</code>
+        </pre>
+      </article>
+    </>
   );
 }
 
