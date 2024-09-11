@@ -119,11 +119,26 @@ export function ShadcnDemo() {
                   <CardDescription>Buttons, toggles, and more</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex space-x-2">
-                    <Button>Primary</Button>
-                    <Button variant="secondary">Secondary</Button>
-                    <Button variant="outline">Outline</Button>
-                    <Button variant="ghost">Ghost</Button>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex gap-2">
+                      <Button>Primary</Button>
+                      <Button variant="secondary">Secondary</Button>
+                      <Button variant="outline">Outline</Button>
+                      <Button variant="ghost">Ghost</Button>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <Button size="sm">Primary</Button>
+                      <Button size="sm" variant="secondary">
+                        Secondary
+                      </Button>
+                      <Button size="sm" variant="outline">
+                        Outline
+                      </Button>
+                      <Button size="sm" variant="ghost">
+                        Ghost
+                      </Button>
+                    </div>
                   </div>
                   <div className="flex items-center space-x-2 rounded-sm">
                     <Switch id="airplane-mode" />

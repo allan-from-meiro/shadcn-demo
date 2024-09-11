@@ -18,15 +18,15 @@
     --primary-foreground: 0 0 100%;
     --secondary: 0 0 13%;
     --secondary-foreground: 0 0 100%;
-    --muted: 210% 33% 98%;
+    --muted: 210 33% 98%;
     --muted-foreground: 0 0 13%;
-    --accent: 210% 33% 98%;
+    --accent: 210 33% 98%;
     --accent-foreground: 0 0 13%;
     --destructive: 4 84% 55%;
     --destructive-foreground: 0 0 100%;
     --border: 0 0 90%;
     --input: 0 0 90%;
-    --ring: 10 99% 70%;
+    --ring: 0 0% 80%;
     --radius: 0.5rem;
   }
   .dark {
